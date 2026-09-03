@@ -44,14 +44,14 @@ document.addEventListener("DOMContentLoaded",()=>{
       if(!data.session)throw new Error("CONFIRM_EMAIL_ON");
 
       const memberCode=makeMemberCode(data.user.id);
-      const {error:discordError}=await window.sb.functions.invoke("notify-registration",{
-        body:{
-          username,
-          email,
-          memberCode,
-          createdAt:new Date().toISOString()
-        }
-      });
+      const { error: discordError } =
+  await window.sb.functions.invoke("quick-handler", {
+    body: {
+      username: username,
+      email: email,
+      memberId: memberCode
+    }
+  });
 
       if(discordError){
         console.error("Discord notification error:",discordError);

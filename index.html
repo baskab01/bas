@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BAS SHOP</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js" defer></script>
+<script src="js/app.js" defer></script>
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><b>BAS</b> SHOP</a>
+  <nav id="nav-links">
+    <a class="active" href="index.html">สินค้า</a>
+    <a href="login.html">เข้าสู่ระบบ</a>
+    <a class="pill" href="register.html">สมัครสมาชิก</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">BAS SHOP</div>
+    <h1>สินค้าของคุณ<br><span>สไตล์ของคุณ</span></h1>
+    <p>เลือกสินค้าที่ต้องการจากร้าน BAS SHOP</p>
+    <a class="cta" href="#products">ดูสินค้าทั้งหมด</a>
+  </div>
+</section>
+
+<main id="products" class="section">
+  <div class="section-head">
+    <div><div class="eyebrow">OUR PRODUCTS</div><h2>สินค้าทั้งหมด</h2></div>
+    <button class="ghost-btn" onclick="loadProducts()">รีเฟรช</button>
+  </div>
+  <div id="product-list" class="grid"><div class="loading">กำลังโหลดสินค้า...</div></div>
+</main>
+
+<footer>© 2026 BAS SHOP</footer>
+</body>
+</html>

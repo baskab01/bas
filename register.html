@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>สมัครสมาชิก | BAS SHOP</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js" defer></script>
+<script src="js/auth.js" defer></script>
+</head>
+<body class="auth-page">
+<div class="auth-card">
+  <a class="brand center" href="index.html"><b>BAS</b> SHOP</a>
+  <h1>สร้างบัญชี</h1>
+  <p class="muted">สมัครแล้วเข้าใช้งานได้ทันที</p>
+  <form id="register-form">
+    <label>ชื่อผู้ใช้</label>
+    <input id="register-username" autocomplete="username" minlength="3" maxlength="30" required placeholder="เช่น bas123">
+    <label>อีเมล</label>
+    <input id="register-email" type="email" autocomplete="email" required placeholder="example@gmail.com">
+    <label>รหัสผ่าน</label>
+    <input id="register-password" type="password" autocomplete="new-password" minlength="6" required placeholder="อย่างน้อย 6 ตัวอักษร">
+    <label>ยืนยันรหัสผ่าน</label>
+    <input id="register-confirm" type="password" autocomplete="new-password" minlength="6" required placeholder="กรอกรหัสผ่านอีกครั้ง">
+    <button class="primary full" type="submit">สมัครสมาชิก</button>
+  </form>
+  <div id="register-message" class="message"></div>
+  <p class="switch">มีบัญชีแล้ว? <a href="login.html">เข้าสู่ระบบ</a></p>
+  <a class="back" href="index.html">← กลับหน้าสินค้า</a>
+</div>
+</body>
+</html>
